@@ -33,11 +33,11 @@ const Home = () => {
   };
 
   const loadStudents = async () => {
-    let fetchedStudents = await fetch("http://localhost:8000/api/getstudents", {
+    let fetchedStudents = await fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL}/api/getstudents`, {
       method: "GET",
     });
     fetchedStudents = await fetchedStudents.json();
-    console.log(fetchedStudents);
+    // console.log(fetchedStudents);
     setStudents(fetchedStudents);
   };
 

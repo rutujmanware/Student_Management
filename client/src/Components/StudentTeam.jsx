@@ -40,7 +40,7 @@ const StudentTeam = ({ student, setMyTeam, myTeam , allowJudgement , setLoading}
     // Reset the validation status
     setIsFormValid(true);
     try {
-      const response = await fetch("http://localhost:8000/api/addmarks", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL}/api/addmarks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const StudentTeam = ({ student, setMyTeam, myTeam , allowJudgement , setLoading}
     setLoading(true)
     try {
       // console.log("Before removal: myTeam", myTeam);
-      const response = await fetch("http://localhost:8000/api/removestudent", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL}/api/removestudent`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

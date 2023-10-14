@@ -6,7 +6,7 @@ const Student = ({ student, setMyTeam, myTeam, allowJudgement, setLoading }) => 
   const handleAddtoTeam = async () => {
     try {
       setLoading(true)
-      const response = await fetch("http://localhost:8000/api/addstudents", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL}/api/addstudents`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", 
