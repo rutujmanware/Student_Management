@@ -32,6 +32,8 @@ const StudentTeam = ({ student, setMyTeam, myTeam , allowJudgement , setLoading}
       formData.presentation === null
     ) {
       setIsFormValid(false);
+      setLoading(false);
+      alert("Please fill all the fields")
       return;
     }
 
